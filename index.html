@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0067)file:///C:/Users/felipe.silva/Downloads/painel-plano-90-dias_5.html -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plano de 90 Dias — Área do Cliente &amp; Redesign do Site</title>
+<title>Levantamento de Dados — Cashback &amp; Créditos Sua Casa Nosso Bar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./Plano de 90 Dias — Área do Cliente &amp; Redesign do Site_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --red:#E20D21;
@@ -14,6 +12,7 @@
     --cream:#F4F4F4;
     --gray:#6B6B6B;
     --line:#E4E4E4;
+    --green:#1E8E5A;
   }
   *{box-sizing:border-box;}
   body{margin:0; background:var(--cream); color:var(--black); font-family:'Nunito',sans-serif;}
@@ -21,20 +20,20 @@
 
   header{background:var(--black); color:#fff; padding:34px 0 26px; position:relative; overflow:hidden; border-top:6px solid var(--red);}
   header::after{content:""; position:absolute; left:0; bottom:0; width:100%; height:6px; background:var(--orange);}
-  .header-inner{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 32px;}
+  .header-inner{position:relative; z-index:2; max-width:1120px; margin:0 auto; padding:0 32px;}
   .eyebrow{color:var(--orange); text-transform:uppercase; letter-spacing:3px; font-size:12px; font-weight:600; margin:0 0 10px;}
-  header h1{font-size:27px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.5px; line-height:1.25; font-weight:800; max-width:780px;}
-  header p.sub{margin:0 0 4px; color:#D8D8D8; font-size:14px; max-width:660px; line-height:1.6;}
+  header h1{font-size:26px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.5px; line-height:1.25; font-weight:800; max-width:820px;}
+  header p.sub{margin:0 0 4px; color:#D8D8D8; font-size:14px; max-width:700px; line-height:1.6;}
   .viewing{margin-top:16px; font-size:12.5px; color:#bdbdbd;}
   .viewing b{color:#fff;}
 
   nav{display:block; background:#fff; border-bottom:2px solid var(--line); position:sticky; top:0; z-index:50;}
-  .nav-inner{display:flex; max-width:1080px; margin:0 auto; padding:0 16px; overflow-x:auto;}
+  .nav-inner{display:flex; max-width:1120px; margin:0 auto; padding:0 16px; overflow-x:auto;}
   nav button{font-family:'Poppins',sans-serif; background:none; border:none; padding:14px 16px; font-size:12px; text-transform:uppercase; letter-spacing:.3px; color:var(--gray); cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; font-weight:500; transition:.15s;}
   nav button:hover{color:var(--black);}
   nav button.active{color:var(--red); border-bottom-color:var(--red); font-weight:600;}
 
-  main{max-width:1080px; margin:0 auto; padding:32px 32px 80px;}
+  main{max-width:1120px; margin:0 auto; padding:32px 32px 80px;}
   .tab{display:none; animation:fade .25s ease;}
   .tab.active{display:block;}
   @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
@@ -42,23 +41,30 @@
   section{margin-bottom:34px;}
   .section-title{display:flex; align-items:baseline; gap:10px; margin-bottom:16px;}
   .section-title .num{font-family:'Poppins',sans-serif; color:var(--red); font-size:15px; font-weight:700;}
-  .section-title h2{font-size:20px; text-transform:uppercase; letter-spacing:.5px; margin:0; color:var(--black);}
+  .section-title h2{font-size:19px; text-transform:uppercase; letter-spacing:.5px; margin:0; color:var(--black);}
+  .section-sub{font-size:13px; color:var(--gray); margin:-10px 0 16px; line-height:1.5;}
 
   .card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:20px 22px;}
   .grid{display:grid; gap:16px;}
   .grid-2{grid-template-columns:1fr 1fr;}
   .grid-3{grid-template-columns:repeat(3,1fr);}
   .grid-4{grid-template-columns:repeat(4,1fr);}
-  @media(max-width:820px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+  .grid-5{grid-template-columns:repeat(5,1fr);}
+  @media(max-width:900px){.grid-2,.grid-3,.grid-4,.grid-5{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.grid-2,.grid-3,.grid-4,.grid-5{grid-template-columns:1fr;}}
 
   .stat-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 20px; border-top:4px solid var(--red);}
   .stat-card.orange{border-top-color:var(--orange);}
   .stat-card.black{border-top-color:var(--black);}
+  .stat-card.green{border-top-color:var(--green);}
   .stat-num{font-size:22px; font-weight:700; color:var(--black);}
   .stat-label{font-size:12.5px; color:var(--gray); margin-top:4px; line-height:1.4;}
   .stat-desc{font-size:11.5px; color:var(--gray); margin-top:9px; padding-top:9px; border-top:1px solid var(--line); line-height:1.5;}
   .stat-num .now{font-size:15px; color:var(--gray); font-weight:600;}
   .stat-num .arrow{color:var(--red); font-weight:700; margin:0 4px;}
+  .stat-trend{font-size:11.5px; font-weight:700; margin-top:6px;}
+  .stat-trend.up{color:var(--green);}
+  .stat-trend.down{color:var(--red);}
 
   .kv-list{list-style:none; margin:0; padding:0;}
   .kv-list li{padding:10px 0; border-bottom:1px solid var(--line); font-size:14px; line-height:1.5;}
@@ -79,6 +85,8 @@
   .callout.red b{color:var(--red);}
   .badge{display:inline-block; font-size:10.5px; text-transform:uppercase; letter-spacing:.5px; font-weight:700; padding:3px 9px; border-radius:20px;}
   .badge.pending{background:#EFEFEF; color:var(--gray);}
+  .badge.src{background:#EAF3EE; color:var(--green);}
+  .badge.gap{background:#FDE8E8; color:var(--red);}
 
   .area-card{background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden;}
   .area-head{background:var(--black); color:#fff; padding:12px 16px; display:flex; align-items:center; gap:10px;}
@@ -89,55 +97,45 @@
   .area-body .tag{font-size:10.5px; text-transform:uppercase; letter-spacing:.6px; color:var(--red); font-weight:700; display:block; margin-bottom:2px;}
   .area-body .tag.cons{color:var(--orange);} .area-body .tag.imp{color:var(--black);}
 
-  .smart-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px; margin-bottom:18px;}
-  .smart-card .init-head{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid var(--line);}
-  .smart-card .init-head h3{margin:0; font-size:16px; text-transform:uppercase; letter-spacing:.3px;}
-  .smart-card .init-head .resp{font-size:12.5px; color:var(--gray);}
-  .smart-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:12px;}
-  @media(max-width:900px){.smart-grid{grid-template-columns:repeat(2,1fr);}}
-  .smart-item{font-size:12.5px; line-height:1.5; background:var(--cream); border-radius:8px; padding:10px 12px;}
-  .smart-item .letter{font-family:'Poppins',sans-serif; font-weight:700; color:var(--red); font-size:12px; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:4px;}
-
-  .timeline{position:relative; padding-left:26px;}
-  .timeline::before{content:""; position:absolute; left:6px; top:4px; bottom:4px; width:2px; background:var(--line);}
-  .tl-item{position:relative; padding-bottom:26px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{content:""; position:absolute; left:-26px; top:2px; width:14px; height:14px; border-radius:50%; background:var(--red); border:3px solid #fff; box-shadow:0 0 0 2px var(--red);}
-  .tl-date{font-family:'Poppins',sans-serif; font-weight:700; color:var(--red); font-size:13px;}
-  .tl-title{font-size:14px; font-weight:700; margin:2px 0 4px;}
-  .tl-desc{font-size:13px; color:var(--gray); line-height:1.5;}
-  .tl-meta{font-size:11.5px; color:var(--gray); margin-top:4px; font-style:italic;}
-
   .chips{display:flex; flex-wrap:wrap; gap:8px;}
   .chip{background:#fff; border:1px solid var(--line); border-radius:20px; padding:7px 14px; font-size:12.5px; font-weight:600;}
   .footer-note{text-align:center; font-size:12px; color:var(--gray); margin-top:50px; padding-top:20px; border-top:1px solid var(--line);}
-  .radar-wrap{display:flex; justify-content:center;}
-  .radar-axis-label{font-family:'Poppins',sans-serif; font-size:11px; fill:var(--black); font-weight:600;}
 
   table{width:100%; border-collapse:collapse; font-size:13px;}
   th{text-align:left; font-family:'Poppins',sans-serif; text-transform:uppercase; letter-spacing:.5px; font-size:11px; color:#fff; background:var(--black); padding:10px 12px;}
   td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
   tr:last-child td{border-bottom:none;}
+  .src-note{font-size:11px; color:var(--gray); margin-top:8px; font-style:italic;}
+
+  .funnel{display:flex; flex-direction:column; gap:4px; margin:20px 0;}
+  .funnel-row{display:flex; align-items:center; gap:16px;}
+  .funnel-bar-wrap{flex:1; display:flex; justify-content:center;}
+  .funnel-bar{background:linear-gradient(90deg,var(--red),var(--orange)); border-radius:6px; padding:14px 20px; color:#fff; text-align:center; font-family:'Poppins',sans-serif; transition:.2s; min-width:220px; box-sizing:border-box;}
+  .funnel-bar .fnum{font-size:19px; font-weight:700;}
+  .funnel-bar .flabel{font-size:11px; text-transform:uppercase; letter-spacing:.4px; opacity:.92; margin-top:2px;}
+  .funnel-pct{width:70px; text-align:right; font-size:12px; color:var(--gray); font-weight:700; font-family:'Poppins',sans-serif;}
+  .funnel-arrow{text-align:center; color:var(--line); font-size:16px; margin:0 auto;}
 </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <p class="eyebrow">Cervejaria Germânia · Lig Chopp Germânia</p>
-    <h1>Plano de 90 Dias — Área do Cliente &amp; Redesign do Site</h1>
-    <p class="sub">Protótipo de uma área do cliente (cashback, créditos Sua Casa Nosso Bar e histórico de pedidos) e redesign completo do site institucional, hoje em Mobirise.</p>
-    <div class="viewing">Responsável: <b>Felipe</b> — design (Figma) e desenvolvimento (Claude Code) · deploy final com TI</div>
+    <p class="eyebrow">Cervejaria Germânia · Fase de Pesquisa</p>
+    <h1>Levantamento de Dados — Cashback &amp; Créditos Sua Casa Nosso Bar</h1>
+    <p class="sub">Consolidação de dados do Google Analytics, do dashboard comercial "Lig Chopp Germânia" e do dashboard "SCNB / Chopeiras" para embasar o redesign do site e a criação da área do cliente.</p>
+    <div class="viewing">Período de referência: <b>janeiro a junho de 2026</b></div>
   </div>
 </header>
 
 <nav id="tabs">
   <div class="nav-inner">
   <button data-tab="overview" class="active">Visão Geral</button>
-  <button data-tab="diagnostico">Diagnóstico</button>
-  <button data-tab="smart">Metas SMART</button>
-  <button data-tab="cronograma">Cronograma</button>
-  <button data-tab="ritos">Ritos &amp; Unidades</button>
+  <button data-tab="analytics">Analytics (Site)</button>
+  <button data-tab="funil">Funil de Aquisição</button>
+  <button data-tab="comercial">Comercial · Recorrência</button>
+  <button data-tab="scnb">SCNB · Créditos</button>
+  <button data-tab="insights">Insights &amp; Lacunas</button>
   </div>
 </nav>
 
@@ -146,318 +144,642 @@
 <!-- ===================== VISÃO GERAL ===================== -->
 <div class="tab active" data-tab="overview">
   <section>
-    <div class="grid grid-4">
+    <div class="grid grid-5">
       <div class="stat-card">
         <div class="stat-num"><span class="now">1x</span><span class="arrow">→</span>3x</div>
-        <div class="stat-label">Compras por cliente ao ano</div>
-        <div class="stat-desc">Hoje a base compra em média 1 vez por ano. A área do cliente é o que viabiliza o cashback: sem ela, o cliente não teria como acompanhar seu saldo, o que esvaziaria o incentivo à recompra. Juntos, a meta é elevar a recorrência para 3x ao ano.</div>
-      </div>
-      <div class="stat-card orange">
-        <div class="stat-num"><span class="now">0%</span><span class="arrow">→</span>100%</div>
-        <div class="stat-label">Rastreamento de tráfego do site</div>
-        <div class="stat-desc">Hoje não há Google Analytics/Clarity implementado. O novo site já nasce mensurável.</div>
-      </div>
-      <div class="stat-card black">
-        <div class="stat-num">Protótipo</div>
-        <div class="stat-label">Entregável dos 90 dias</div>
-        <div class="stat-desc">MVP funcional (design + estrutura técnica navegável). Deploy em produção é fase futura.</div>
+        <div class="stat-label">Compras por cliente ao ano (meta do Cashback)</div>
+        <div class="stat-desc">Baseline declarado do negócio. No site, apenas ~10% dos usuários do semestre voltaram a acessá-lo — o retrato digital mais direto dessa baixa recorrência.</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" style="font-size:17px;">03/08 → 06/11/2026</div>
-        <div class="stat-label">Janela do ciclo, em dias úteis</div>
-        <div class="stat-desc">5 fases, sempre iniciando e terminando em dia útil (sem fins de semana nas bordas).</div>
+        <div class="stat-num">R$1,42 mi</div>
+        <div class="stat-label">Crédito SCNB elegível (411 contas)</div>
+        <div class="stat-desc">Estimativa via CRM — depende de baixa manual pelas lojas no resgate, pode haver imprecisão.</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">100</div>
+        <div class="stat-label">Lojas na rede</div>
+        <div class="stat-desc">Cada loja controla o crédito do Sua Casa Nosso Bar (SCNB) de um jeito diferente — algumas nem controlam. Escala do problema de padronização.</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">46 mil</div>
+        <div class="stat-label">Usuários ativos no site (jan–jun/26)</div>
+        <div class="stat-desc">Apenas 5,2 mil (11%) são recorrentes. Referência de audiência digital do semestre.</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-num">R$760k</div>
+        <div class="stat-label">Faturamento comercial (Lig Chopp, jan–jun/26)</div>
+        <div class="stat-desc">873 pedidos fechados no semestre, com conversão média de 26,9% (orçamento → pedido).</div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="section-title"><span class="num">01</span><h2>Daqui a 90 dias, por que a Germânia estará mais perto do objetivo?</h2></div>
-    <div class="card"><ol class="num-list">
-      <li><b>Protótipo da área do cliente pronto.</b> Cashback, créditos do Sua Casa Nosso Bar e histórico de pedidos reunidos em um só lugar, mesmo antes do cashback existir de fato.</li>
-      <li><b>Site completamente redesenhado.</b> Substitui o visual datado do Mobirise por um design moderno, alinhado à marca.</li>
-      <li><b>Lacuna de visibilidade do crédito resolvida.</b> O cliente deixa de depender da loja para saber seu saldo — passo que viabiliza o cashback 100% rastreável.</li>
-      <li><b>Base pronta para medir o que hoje é invisível.</b> Estrutura de dados e KPIs definidos para, na implementação, acompanhar tráfego, adoção e recorrência.</li>
-    </ol></div>
-  </section>
-
-  <section>
-    <div class="section-title"><span class="num">02</span><h2>Principal obstáculo</h2></div>
-    <div class="card"><ul class="kv-list">
-      <li>Site desatualizado (Mobirise), sem capacidade técnica de integrar uma área do cliente.</li>
-      <li>Sem padrão entre as lojas para registrar créditos do Sua Casa Nosso Bar — risco de confusão nos dados.</li>
-      <li>Nenhum rastreamento de tráfego do site hoje (sem Analytics/Clarity).</li>
-      <li>Processo de pedidos ainda manual (central repassando para a loja mais próxima).</li>
-      <li>Cultura organizacional antiga e resistência da diretoria a mudanças.</li>
-      <li>Lojistas costumam ter certa resistência a mudanças de processo e adoção de novas ferramentas, o que pede atenção especial na capacitação e no acompanhamento pós-implementação.</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <div class="section-title"><span class="num">03</span><h2>Foco de transformação</h2></div>
-    <div class="formula">Área do cliente + Cashback rastreável <span class="eq">=</span> Confiança do cliente <span class="eq">=</span> + Recorrência de compra</div>
-  </section>
-
-  <section>
-    <div class="section-title"><span class="num">04</span><h2>Norte do plano</h2></div>
-    <div class="card"><ul class="kv-list">
-      <li><b>Para onde vamos?</b> Uma nova área do cliente digital, integrada a um site redesenhado, que centraliza cashback, créditos e histórico de pedidos.</li>
-      <li><b>Por que isso é importante?</b> O site atual limita a imagem da marca, e o cliente hoje não tem como ver seu saldo de créditos sem perguntar à loja — o que ainda gera confusão, por falta de padrão entre lojas.</li>
-      <li><b>Impacto para a empresa?</b> Mais recorrência de compra, melhor experiência do cliente e uma imagem de marca mais moderna.</li>
-      <li><b>Foco absoluto?</b> Desenvolver e entregar o protótipo funcional dentro de 90 dias.</li>
-      <li><b>Como medir o sucesso?</b> Protótipo entregue e validado + estrutura pronta para cashback, créditos e histórico + KPIs definidos para a fase de implementação.</li>
-      <li><b>Prioridades?</b> 1) Design · 2) Estrutura técnica do protótipo · 3) Simulação de dados de pedidos · 4) Testes e validação.</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <div class="section-title"><span class="num">05</span><h2>Metodologia de priorização</h2></div>
+    <div class="section-title"><span class="num">01</span><h2>Duas frentes, um mesmo objetivo</h2></div>
     <div class="card">
-      <div class="callout"><b>Matriz Esforço × Impacto.</b> Demandas classificadas em quadrantes de alto/baixo impacto e esforço, priorizando entregas de alto impacto e baixo esforço nas primeiras semanas — ideal para uma equipe enxuta trabalhando em 90 dias.</div>
+      <div class="grid grid-2">
+        <div>
+          <p style="font-size:13.5px; font-weight:700; color:var(--red); margin:0 0 8px;">Cashback (a criar)</p>
+          <p style="font-size:13.5px; line-height:1.6; margin:0;">Programa novo. Objetivo: aumentar a recorrência de compra de <b>1x</b> para <b>3x ao ano</b>. A área do cliente dá visibilidade ao saldo, sustentando o incentivo à recompra.</p>
+        </div>
+        <div>
+          <p style="font-size:13.5px; font-weight:700; color:var(--orange); margin:0 0 8px;">Sua Casa Nosso Bar / SCNB (já existe)</p>
+          <p style="font-size:13.5px; line-height:1.6; margin:0;">Ao comprar uma chopeira, o cliente recebe 100% do valor em créditos de chopp. Hoje sem padronização entre as 100 lojas. A área do cliente resolve a lacuna de visibilidade desse crédito.</p>
+        </div>
+      </div>
     </div>
   </section>
-</div>
 
-<!-- ===================== DIAGNÓSTICO ===================== -->
-<div class="tab" data-tab="diagnostico">
   <section>
-    <div class="section-title"><span class="num">—</span><h2>Radar de maturidade por área</h2></div>
-    <div class="card">
-      <div class="radar-wrap"><svg id="radar" width="500" height="470" viewBox="0 0 500 470"><polygon points="250.0,180.0 271.2,188.8 280.0,210.0 271.2,231.2 250.0,240.0 228.8,231.2 220.0,210.0 228.8,188.8" fill="none" stroke="#E4E4E4" stroke-width="1"></polygon><text x="254" y="184.0" font-size="10" fill="#9a9a9a" font-family="Poppins">2</text><polygon points="250.0,150.0 292.4,167.6 310.0,210.0 292.4,252.4 250.0,270.0 207.6,252.4 190.0,210.0 207.6,167.6" fill="none" stroke="#E4E4E4" stroke-width="1"></polygon><text x="254" y="154.0" font-size="10" fill="#9a9a9a" font-family="Poppins">4</text><polygon points="250.0,120.0 313.6,146.4 340.0,210.0 313.6,273.6 250.0,300.0 186.4,273.6 160.0,210.0 186.4,146.4" fill="none" stroke="#E4E4E4" stroke-width="1"></polygon><text x="254" y="124.0" font-size="10" fill="#9a9a9a" font-family="Poppins">6</text><polygon points="250.0,90.0 334.9,125.1 370.0,210.0 334.9,294.9 250.0,330.0 165.1,294.9 130.0,210.0 165.1,125.1" fill="none" stroke="#E4E4E4" stroke-width="1"></polygon><text x="254" y="94.0" font-size="10" fill="#9a9a9a" font-family="Poppins">8</text><polygon points="250.0,60.0 356.1,103.9 400.0,210.0 356.1,316.1 250.0,360.0 143.9,316.1 100.0,210.0 143.9,103.9" fill="none" stroke="#E4E4E4" stroke-width="1"></polygon><text x="254" y="64.0" font-size="10" fill="#9a9a9a" font-family="Poppins">10</text><line x1="250" y1="210" x2="250.0" y2="60.0" stroke="#E4E4E4" stroke-width="1"></line><text x="250.0" y="38.0" text-anchor="middle" class="radar-axis-label">Clientes</text><line x1="250" y1="210" x2="356.1" y2="103.9" stroke="#E4E4E4" stroke-width="1"></line><text x="374.5" y="89.5" text-anchor="start" class="radar-axis-label">Comercial</text><line x1="250" y1="210" x2="400.0" y2="210.0" stroke="#E4E4E4" stroke-width="1"></line><text x="426.0" y="214.0" text-anchor="start" class="radar-axis-label">Marketing</text><line x1="250" y1="210" x2="356.1" y2="316.1" stroke="#E4E4E4" stroke-width="1"></line><text x="374.5" y="338.5" text-anchor="start" class="radar-axis-label">Financeiro</text><line x1="250" y1="210" x2="250.0" y2="360.0" stroke="#E4E4E4" stroke-width="1"></line><text x="250.0" y="390.0" text-anchor="middle" class="radar-axis-label">Operações</text><line x1="250" y1="210" x2="143.9" y2="316.1" stroke="#E4E4E4" stroke-width="1"></line><text x="125.5" y="338.5" text-anchor="end" class="radar-axis-label">Pessoas</text><line x1="250" y1="210" x2="100.0" y2="210.0" stroke="#E4E4E4" stroke-width="1"></line><text x="74.0" y="214.0" text-anchor="end" class="radar-axis-label">Liderança</text><line x1="250" y1="210" x2="143.9" y2="103.9" stroke="#E4E4E4" stroke-width="1"></line><text x="125.5" y="89.5" text-anchor="end" class="radar-axis-label">Gestão</text><polygon points="250.0,120.0 324.2,135.8 370.0,210.0 334.9,294.9 250.0,345.0 186.4,273.6 175.0,210.0 165.1,125.1" fill="#E20D2122" stroke="#E20D21" stroke-width="2.5"></polygon><circle cx="250.0" cy="120.0" r="3.5" fill="#E20D21"></circle><circle cx="324.2" cy="135.8" r="3.5" fill="#E20D21"></circle><circle cx="370.0" cy="210.0" r="3.5" fill="#E20D21"></circle><circle cx="334.9" cy="294.9" r="3.5" fill="#E20D21"></circle><circle cx="250.0" cy="345.0" r="3.5" fill="#E20D21"></circle><circle cx="186.4" cy="273.6" r="3.5" fill="#E20D21"></circle><circle cx="175.0" cy="210.0" r="3.5" fill="#E20D21"></circle><circle cx="165.1" cy="125.1" r="3.5" fill="#E20D21"></circle></svg></div>
-      <p class="callout" style="margin-top:6px;">Escala 0–10. Operações é o ponto mais alto (9); Liderança, o mais baixo (5) — reforçando a resistência a mudanças já apontada como obstáculo.</p>
-    </div>
-  </section>
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>Diagnóstico por área — evidência · consequência · impacto</h2></div>
-    <div class="grid grid-2" id="diag-grid">
-    <div class="area-card">
-      <div class="area-head"><span class="idx">01</span><h3>Clientes</h3><span class="badge" style="margin-left:auto;background:#FDE8E8;color:var(--red);">Maior gargalo</span></div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>Base compra em média 1x/ano; sem acesso direto ao saldo de créditos do Sua Casa Nosso Bar.</div>
-        <div class="row"><span class="tag cons">Consequência</span>Cliente precisa perguntar à loja para saber o saldo, o que gera espera e possível confusão.</div>
-        <div class="row"><span class="tag imp">Impacto</span>Baixa recorrência de compra e experiência de marca prejudicada.</div>
-      </div>
-    </div>
-    <div class="area-card">
-      <div class="area-head"><span class="idx">02</span><h3>Tecnologia / Site</h3></div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>Site atual em Mobirise, visual datado, sem rastreamento de tráfego (sem Analytics/Clarity).</div>
-        <div class="row"><span class="tag cons">Consequência</span>Impossível medir comportamento do usuário ou validar decisões de design com dados.</div>
-        <div class="row"><span class="tag imp">Impacto</span>Imagem de marca ultrapassada e decisões tomadas sem visibilidade real do site.</div>
-      </div>
-    </div>
-    <div class="area-card">
-      <div class="area-head"><span class="idx">03</span><h3>Fidelização</h3></div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>Programa de cashback ainda não existe; créditos SCNB sem padrão de registro entre lojas.</div>
-        <div class="row"><span class="tag cons">Consequência</span>Falta de padronização gera inconsistência nas informações de saldo.</div>
-        <div class="row"><span class="tag imp">Impacto</span>Recorrência estagnada em 1x/ano — meta é chegar a 3x/ano.</div>
-      </div>
-    </div>
-    <div class="area-card">
-      <div class="area-head"><span class="idx">04</span><h3>Operação de Pedidos</h3></div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>Pedidos via WhatsApp/telefone, repassados manualmente da central à loja mais próxima.</div>
-        <div class="row"><span class="tag cons">Consequência</span>Processo dependente de intermediação humana; canal digital direto ainda em implementação.</div>
-        <div class="row"><span class="tag imp">Impacto</span>Risco de erro e lentidão no atendimento ao cliente final.</div>
-      </div>
-    </div>
-    <div class="area-card">
-      <div class="area-head"><span class="idx">05</span><h3>Cultura / Liderança</h3></div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>Cultura organizacional antiga; menor nota do radar de maturidade está em Liderança (5).</div>
-        <div class="row"><span class="tag cons">Consequência</span>Resistência da diretoria a mudanças no formato de atendimento e nos processos.</div>
-        <div class="row"><span class="tag imp">Impacto</span>Risco de lentidão na adoção do novo sistema, mesmo estando pronto.</div>
-      </div>
-    </div></div>
-  </section>
-</div>
-
-<!-- ===================== METAS SMART ===================== -->
-<div class="tab" data-tab="smart">
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>Meta SMART do ciclo</h2></div>
-    <div id="smart-list">
-    <div class="smart-card">
-      <div class="init-head"><h3>Protótipo do site + área do cliente</h3><span class="resp">Responsável: Felipe</span></div>
-      <div class="smart-grid">
-        <div class="smart-item"><span class="letter">S · Específico</span>Desenvolver o protótipo do novo site institucional com área do cliente funcional (cashback, créditos Sua Casa Nosso Bar e histórico de pedidos). A implementação em produção é uma fase futura.</div>
-        <div class="smart-item"><span class="letter">M · Mensurável</span>Protótipo entregue e validado + área do cliente funcional em ambiente de teste + nº de clientes participantes do teste/validação (a definir).</div>
-        <div class="smart-item"><span class="letter">A · Atingível</span>Viável com equipe interna de design e desenvolvimento e ferramentas já em uso (Figma, Claude Code, Lovable).</div>
-        <div class="smart-item"><span class="letter">R · Relevante</span>Base para aumentar a frequência de compra de 1x para 3x ao ano e modernizar a imagem da marca.</div>
-        <div class="smart-item"><span class="letter">T · Temporal</span>90 dias úteis, de 03/08/2026 a 06/11/2026.</div>
-      </div>
-    </div>
-    <div class="smart-card">
-      <div class="init-head"><h3>Capacitação dos lojistas para uso da área do cliente</h3><span class="resp">Responsável: Felipe</span></div>
-      <div class="smart-grid">
-        <div class="smart-item"><span class="letter">S · Específico</span>Capacitar os lojistas e suas equipes para utilizar a área do cliente após a implementação em produção — consulta de créditos SCNB, histórico de pedidos e, futuramente, cashback.</div>
-        <div class="smart-item"><span class="letter">M · Mensurável</span>100% das lojas com pelo menos uma pessoa capacitada, usando checklist de treinamento e material de apoio (guia rápido/vídeo).</div>
-        <div class="smart-item"><span class="letter">A · Atingível</span>Viável com material de apoio simples e treinamento remoto ou presencial nas lojas, já com a estrutura pronta ao final dos 90 dias.</div>
-        <div class="smart-item"><span class="letter">R · Relevante</span>Sem essa capacitação, o registro de créditos continuaria manual e sem padrão, anulando parte do ganho do projeto — é o elo entre o protótipo pronto e o uso real na ponta.</div>
-        <div class="smart-item"><span class="letter">T · Temporal</span>A definir — depende da fase de implementação em produção, posterior aos 90 dias (possível primeiro passo do próximo ciclo).</div>
-      </div>
-    </div></div>
-  </section>
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>Ação de maior impacto</h2></div>
-    <div class="card">
-      <p style="font-size:13.5px; line-height:1.6; margin:0;">Desenvolvimento do protótipo do site com a área do cliente funcional: resolve a imagem de marca datada e cria a interface digital que hoje não existe para o cliente acessar suas próprias informações — aproveitando a estrutura de dados já existente no RD Station — além de preparar o terreno para o programa de cashback.</p>
-    </div>
-  </section>
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>KPIs definidos <span class="badge pending" style="margin-left:8px;">após a implementação</span></h2></div>
+    <div class="section-title"><span class="num">02</span><h2>Fontes de dados consultadas nesta rodada</h2></div>
     <div class="card"><ul class="kv-list">
-      <li><b>Taxa de conversão para cadastro</b> na área do cliente (visitantes → cadastros) — mede a adoção da nova área.</li>
-      <li><b>Consultas ao saldo de créditos SCNB</b> — mede se a lacuna de visibilidade foi resolvida, reduzindo a dependência da loja.</li>
-      <li><b>Taxa de retorno</b> (clientes que acessam mais de uma vez) — indicador digital da meta de recorrência.</li>
-      <li><b>Rage clicks / dead clicks</b> (Microsoft Clarity) — termômetro de qualidade de usabilidade.</li>
+      <li><b>Google Analytics 4</b> — propriedade do site institucional da Cervejaria Germânia. Dá o comportamento digital: tráfego, canais, páginas, geografia, dispositivo. Período consolidado: 01/01 a 30/06/2026.</li>
+      <li><b>Dashboard "Relacionamento / Lig Chopp Germânia"</b> — funil comercial completo (Ads → atendimento → orçamento → pedido → faturamento), somado mês a mês de janeiro a junho/2026. Fonte principal para o projeto de <b>Cashback/recorrência</b>.</li>
+      <li><b>Dashboard "SCNB / Chopeiras"</b> — funil comercial da venda/comodato de chopeiras (o gatilho que gera o crédito SCNB), filtrado para 01/01 a 30/06/2026. Fonte parcial para o projeto de <b>créditos SCNB</b> — mede a venda da chopeira, não o crédito em si.</li>
+      <li><b>Planilha "Contas_Compiladas.xlsx"</b> (versão higienizada da base do CRM, com deduplicação e cálculo de elegibilidade) — 4.077 contas do programa SCNB, com saldo de crédito, prazo de vencimento, classificação/tier e histórico de compra da chopeira desde 2015. Complementada por um dashboard próprio gerado a partir dela. Fonte principal para o projeto de <b>créditos SCNB</b>.</li>
+      <li><b>Exportação de negócios do RD Station</b> — histórico de vendas do funil "*Vendas Varejo B2C", usado para calcular a distribuição real de frequência de compra por cliente (fev–jun/2026). Fonte principal para o projeto de <b>Cashback/recorrência</b>.</li>
     </ul></div>
   </section>
 </div>
 
-<!-- ===================== CRONOGRAMA ===================== -->
-<div class="tab" data-tab="cronograma">
+<!-- ===================== ANALYTICS ===================== -->
+<div class="tab" data-tab="analytics">
   <section>
-    <div class="section-title"><span class="num">—</span><h2>Cronograma — do design ao protótipo validado</h2></div>
-    <div class="card"><div class="timeline" id="timeline"><div class="tl-item"><div class="tl-date">03/08 a 04/09/2026</div><div class="tl-title">Design do novo site</div><div class="tl-desc">Redesign completo em Figma (institucional + área do cliente), substituindo o visual datado do Mobirise.</div><div class="tl-meta">Responsável: Felipe</div></div><div class="tl-item"><div class="tl-date">07/09 a 09/10/2026</div><div class="tl-title">Estrutura técnica do protótipo</div><div class="tl-desc">Desenvolvimento via Claude Code: banco de dados, cadastro, login e área do cliente navegável.</div><div class="tl-meta">Responsável: Felipe</div></div><div class="tl-item"><div class="tl-date">12/10 a 16/10/2026</div><div class="tl-title">Simulação de dados</div><div class="tl-desc">Exibição de dados de pedidos e créditos com base em exemplos fiéis à estrutura real do RD Station, sem integração técnica real nesta fase.</div><div class="tl-meta">Responsável: Felipe</div></div><div class="tl-item"><div class="tl-date">19/10 a 30/10/2026</div><div class="tl-title">Testes gerais</div><div class="tl-desc">Testes funcionais, de usabilidade e responsividade, garantindo protótipo sem bugs críticos.</div><div class="tl-meta">Responsável: Felipe</div></div><div class="tl-item"><div class="tl-date">02/11 a 06/11/2026</div><div class="tl-title">Ajustes finais e entrega</div><div class="tl-desc">Protótipo completo, testado e documentado — pronto para uma futura fase de implementação em produção (deploy com TI).</div><div class="tl-meta">Responsável: Felipe + TI (deploy futuro)</div></div></div></div>
-  </section>
-</div>
-
-<!-- ===================== RITOS & UNIDADES ===================== -->
-<div class="tab" data-tab="ritos">
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>Ritos de acompanhamento</h2></div>
-    <div class="card"><ul class="kv-list">
-      <li><b>Diário.</b> Prioridades do dia, acompanhamento das tarefas e resolução rápida de bloqueios técnicos (ex.: dúvidas de prompt no Claude Code).</li>
-      <li><b>Semanal.</b> Avaliação do progresso vs. cronograma, revisão do que foi entregue e ajuste de prioridades.</li>
-      <li><b>Mensal.</b> Apresentação do progresso à diretoria/gestão e comparação entre planejado e realizado.</li>
-      <li><b>Trimestral (ao fim dos 90 dias).</b> Avaliação final, lições aprendidas e definição do próximo ciclo (ex.: lançamento efetivo do cashback).</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <div class="section-title"><span class="num">—</span><h2>Canais e unidades de negócio</h2></div>
-    <div class="card">
-      <div class="chips">
-        <span class="chip">Central de vendas (WhatsApp/telefone)</span>
-        <span class="chip">Lojas físicas</span>
-        <span class="chip">Canal de venda digital (em implementação)</span>
-        <span class="chip">E-commerce próprio (a implementar)</span>
+    <div class="section-title"><span class="num">01</span><h2>Visão macro do site — semestre (jan–jun/2026)</h2></div>
+    <div class="section-sub">Google Analytics 4 · consolidado de 01/01 a 30/06/2026 · serve de baseline geral, não é específico dos programas.</div>
+    <div class="grid grid-4">
+      <div class="stat-card">
+        <div class="stat-num">46 mil</div>
+        <div class="stat-label">Usuários ativos no semestre</div>
       </div>
-      <p style="font-size:13px; color:var(--gray); line-height:1.6; margin:14px 0 0;">O protótipo é desenhado para atender todos os canais de forma unificada, sem distinção de prioridade — princípio de arquitetura a ser seguido quando o site for implementado em produção.</p>
+      <div class="stat-card">
+        <div class="stat-num">311 mil</div>
+        <div class="stat-label">Contagem de eventos</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">31s</div>
+        <div class="stat-label">Tempo médio de engajamento</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">82,1%</div>
+        <div class="stat-label">Acessos via mobile (17,6% desktop, 0,3% tablet)</div>
+      </div>
     </div>
   </section>
 
   <section>
-    <div class="section-title"><span class="num">—</span><h2>Visão futura <span class="badge pending" style="margin-left:8px;">fora do escopo dos 90 dias</span></h2></div>
+    <div class="section-title"><span class="num">02</span><h2>Novos x recorrentes — o retrato digital da recorrência</h2></div>
     <div class="card">
+      <div class="grid grid-2">
+        <div>
+          <div class="stat-num" style="font-size:26px; color:var(--red);">46 mil <span style="font-size:14px; color:var(--gray); font-weight:600;">novos</span></div>
+          <div class="stat-num" style="font-size:26px;">5,2 mil <span style="font-size:14px; color:var(--gray); font-weight:600;">recorrentes</span></div>
+        </div>
+        <div style="font-size:13.5px; line-height:1.6; color:var(--gray);">Só <b>~10%</b> dos usuários do site voltaram a acessá-lo dentro do semestre. Esse número — mais do que qualquer outro do Analytics — é o retrato digital direto da baixa recorrência que o Cashback pretende resolver.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">03</span><h2>Páginas mais visitadas no semestre</h2></div>
+    <div class="card">
+      <table>
+        <tr><th>Página</th><th>Views</th><th>Usuários ativos</th><th>Eventos</th><th>Rejeição</th></tr>
+        <tr><td><b>Sua Casa Nosso Bar da Germânia</b></td><td>45 mil</td><td>18 mil</td><td>119 mil</td><td style="color:var(--green); font-weight:700;">5,3%</td></tr>
+        <tr><td>Cervejaria Germânia (institucional)</td><td>19 mil</td><td>12 mil</td><td>70 mil</td><td>37,2%</td></tr>
+        <tr><td>Produtos e Estilos Germânia</td><td>4 mil</td><td>2,8 mil</td><td>13 mil</td><td>28,0%</td></tr>
+        <tr><td>LigChopp - Troque seu colarinho!</td><td>3,4 mil</td><td>2,6 mil</td><td>15 mil</td><td>45,6%</td></tr>
+        <tr><td>Lojas Lig Chopp</td><td>2.996</td><td>2.114</td><td>10.549</td><td>30,9%</td></tr>
+        <tr><td>Lojista Germânia</td><td>2,2 mil</td><td>1,7 mil</td><td>6,7 mil</td><td>33,9%</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Nota sobre o número:</b> a taxa de rejeição baixa (5,3%) dessa página provavelmente reflete que mais da metade do tráfego vem de mídia paga bem segmentada (Paid Social + Paid Search), atraindo gente já interessada em comprar uma chopeira — não é evidência de demanda por consultar saldo de crédito. É uma LP de venda; cliente que já tem crédito não tem motivo funcional para revisitá-la. Além disso, essa página está fora do escopo do redesign, que é do site institucional.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">04</span><h2>Canais de aquisição no semestre</h2></div>
+    <div class="grid grid-2">
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Usuários ativos por primeira origem/mídia</p>
+        <table>
+          <tr><td>google / cpc</td><td>12 mil</td></tr>
+          <tr><td>google / organic</td><td>11 mil</td></tr>
+          <tr><td>ig / paid</td><td>7,9 mil</td></tr>
+          <tr><td>ig / social</td><td>1,2 mil</td></tr>
+          <tr><td>an / paid</td><td>322</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Sessões por origem/mídia da sessão</p>
+        <table>
+          <tr><td>google / organic</td><td>15 mil</td></tr>
+          <tr><td>google / cpc</td><td>14 mil</td></tr>
+          <tr><td>ig / paid</td><td>8,6 mil</td></tr>
+          <tr><td>ig / social</td><td>1,2 mil</td></tr>
+          <tr><td>bing / organic</td><td>590</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="src-note">Busca orgânica do Google divide a liderança com mídia paga no semestre completo — sinal de que o peso de cada canal varia bastante mês a mês, e recortes curtos (poucos dias) podem distorcer a leitura.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">05</span><h2>Dispositivo e sistema operacional</h2></div>
+    <div class="grid grid-2">
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Categoria de dispositivo</p>
+        <table>
+          <tr><td>Mobile</td><td>82,1%</td></tr>
+          <tr><td>Desktop</td><td>17,6%</td></tr>
+          <tr><td>Tablet</td><td>0,3%</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Sistema operacional (usuários ativos)</p>
+        <table>
+          <tr><td>Android</td><td>27 mil</td></tr>
+          <tr><td>iOS</td><td>11 mil</td></tr>
+          <tr><td>Windows</td><td>6,8 mil</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="callout"><b>Decisão de design:</b> com 82% dos acessos via mobile, a área do cliente e o redesign do site devem ser desenhados mobile-first, não apenas responsivos.</div>
+  </section>
+</div>
+
+<!-- ===================== FUNIL DE AQUISIÇÃO ===================== -->
+<div class="tab" data-tab="funil">
+  <section>
+    <div class="section-title"><span class="num">—</span><h2>Funil de aquisição até a venda (jan–jun/2026)</h2></div>
+    <div class="section-sub">Do tráfego geral do site até a venda fechada — combinando Google Analytics (visitas e canais) com o dashboard comercial "Lig Chopp Germânia" (atendimentos, orçamentos, pedidos).</div>
+    <div class="callout red"><b>Atenção ao ler este funil:</b> as etapas de topo (visitas, canais) vêm do Analytics do site; as etapas de baixo (atendimentos, orçamentos, vendas) vêm do CRM/dashboard comercial, que recebe leads de múltiplos pontos de contato — não só do site (ex: WhatsApp direto, indicação, loja física). Não é uma atribuição 1 para 1 perfeita, é uma visão macro de escala.</div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">01</span><h2>Visitas — site e landing pages principais</h2></div>
+    <div class="funnel">
+      <div class="funnel-row">
+        <div class="funnel-pct">100%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;"><div class="fnum">58.164</div><div class="flabel">Visitas no site (sessões)</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+      <div class="funnel-row">
+        <div class="funnel-pct">77%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:77%;"><div class="fnum">45 mil</div><div class="flabel">Visualizações · LP Sua Casa Nosso Bar</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+      <div class="funnel-row">
+        <div class="funnel-pct">5%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:12%;"><div class="fnum">2.996</div><div class="flabel">Visualizações · LP Lig Chopp</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+    </div>
+    <p class="src-note">As duas LPs são medidas em visualizações de página (podem incluir mais de uma visualização por sessão), por isso não somam exatamente às 58.164 visitas/sessões. A LP do SCNB concentra a maior parte do interesse do site.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">02</span><h2>De onde vêm as visitas — todos os canais (sessões, jan–jun)</h2></div>
+    <div class="card">
+      <table>
+        <tr><th>Canal</th><th>Sessões</th><th>% do total</th></tr>
+        <tr><td>Organic Search (Google/Bing orgânico)</td><td>15.484</td><td>26,6%</td></tr>
+        <tr><td>Paid Social (anúncios Meta/Instagram)</td><td>15.472</td><td>26,6%</td></tr>
+        <tr><td>Paid Search (Google Ads)</td><td>14.439</td><td>24,8%</td></tr>
+        <tr><td>Direct (digitaram a URL/favoritos)</td><td>7.749</td><td>13,3%</td></tr>
+        <tr><td>Organic Social (posts orgânicos redes sociais)</td><td>2.134</td><td>3,7%</td></tr>
+        <tr><td>Referral (outros sites)</td><td>837</td><td>1,4%</td></tr>
+        <tr><td>Paid Other</td><td>475</td><td>0,8%</td></tr>
+        <tr><td>Cross-network</td><td>164</td><td>0,3%</td></tr>
+        <tr><td>Outros (Unassigned, Vídeo, AI Assistant, Email)</td><td>153</td><td>0,3%</td></tr>
+        <tr><td><b>Total</b></td><td><b>58.164</b></td><td><b>100%</b></td></tr>
+      </table>
+      <div class="callout red" style="margin-top:16px;"><b>WhatsApp não aparece aqui.</b> Quando alguém clica num anúncio que abre direto uma conversa no WhatsApp, essa pessoa nunca "visita o site" — não gera sessão no Analytics. Esse número só existe dentro do funil comercial do SCNB: <b>392 leads</b> vieram do canal "Ads → WhatsApp" no semestre (ver dashboard SCNB/Chopeiras). Não existe um equivalente de WhatsApp para o funil geral do Lig Chopp Germânia — esse dashboard não quebra por canal de origem.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">03</span><h2>Do atendimento à venda — funil comercial (Lig Chopp Germânia)</h2></div>
+    <div class="funnel">
+      <div class="funnel-row">
+        <div class="funnel-pct">100%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;"><div class="fnum">7.978</div><div class="flabel">Atendimentos únicos</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+      <div class="funnel-row">
+        <div class="funnel-pct">41%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:41%;"><div class="fnum">3.241</div><div class="flabel">Orçamentos gerados</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+      <div class="funnel-row">
+        <div class="funnel-pct">11%</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:11%;"><div class="fnum">873</div><div class="flabel">Vendas / pedidos fechados</div></div></div>
+        <div style="width:70px;"></div>
+      </div>
+    </div>
+    <p class="src-note">Conversão atendimento → orçamento: 41%. Conversão orçamento → pedido: 26,9%. Conversão geral atendimento → venda: 10,9%. Fonte: dashboard "Relacionamento / Lig Chopp Germânia", somado mês a mês de jan a jun/2026.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">04</span><h2>Complemento: investimento e leads por frente de Ads</h2></div>
+    <div class="section-sub">Dashboard "Germânia Ads Dashboard" (Meta Ads) · jan–jun/2026 · quebra o investimento e os leads/resultados por frente de campanha, incluindo a frente específica "Sua Casa Nosso Bar".</div>
+    <div class="grid grid-3" style="margin-bottom:16px;">
+      <div class="stat-card">
+        <div class="stat-num">R$24.180</div>
+        <div class="stat-label">Investido em Varejo</div>
+        <div class="stat-desc">3.956 resultados (leads) no semestre · CTR 0,48%</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">R$17.783</div>
+        <div class="stat-label">Investido em Sua Casa Nosso Bar</div>
+        <div class="stat-desc">1.756 resultados (leads) no semestre · CTR 2,41% (o mais alto das 3 frentes)</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">R$15.977</div>
+        <div class="stat-label">Investido em Expansão</div>
+        <div class="stat-desc">981 resultados (leads) no semestre · CTR 1,56%</div>
+      </div>
+    </div>
+    <div class="callout"><b>Leitura:</b> a frente "Sua Casa Nosso Bar" recebe só 31% do investimento em Ads, mas tem o CTR mais alto (2,41% vs. 0,48% do Varejo) — sinal de que o público reage melhor a esse tema, mesmo com menos budget. Total de leads gerados por Ads no semestre (todas as frentes): 6.693.</div>
+  </section>
+</div>
+
+<!-- ===================== COMERCIAL / RECORRÊNCIA ===================== -->
+<div class="tab" data-tab="comercial">
+  <section>
+    <div class="section-title"><span class="num">01</span><h2>Funil comercial — "Lig Chopp Germânia" (jan–jun/2026)</h2></div>
+    <div class="section-sub">Dashboard comercial · consolidado (soma mês a mês) de janeiro a junho/2026 · fonte principal para o projeto de Cashback/recorrência.</div>
+    <div class="grid grid-4">
+      <div class="stat-card">
+        <div class="stat-num">3,96 milhões</div>
+        <div class="stat-label">Leads captados no semestre</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7.978</div>
+        <div class="stat-label">Atendimentos únicos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3.241</div>
+        <div class="stat-label">Orçamentos gerados</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">873</div>
+        <div class="stat-label">Pedidos fechados</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">02</span><h2>Volume e receita do semestre</h2></div>
+    <div class="grid grid-2" style="margin-bottom:16px;">
+      <div class="stat-card black">
+        <div class="stat-num">52.157 L</div>
+        <div class="stat-label">Volume total vendido no semestre</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">R$ 760.263</div>
+        <div class="stat-label">Receita total do semestre</div>
+      </div>
+    </div>
+    <div class="card">
+      <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Evolução mês a mês</p>
+      <table>
+        <tr><th>Mês</th><th>Leads</th><th>Atendimentos</th><th>Orçamentos</th><th>Pedidos</th><th>Litros</th><th>Receita</th></tr>
+        <tr><td>Janeiro</td><td>695.946</td><td>592</td><td>495</td><td>154</td><td>9.710L</td><td>R$141.703</td></tr>
+        <tr><td>Fevereiro</td><td>543.040</td><td>628</td><td>488</td><td>164</td><td>11.189L</td><td>R$139.780</td></tr>
+        <tr><td>Março</td><td>635.426</td><td>1.572</td><td>605</td><td>135</td><td>7.351L</td><td>R$106.362</td></tr>
+        <tr><td>Abril</td><td>697.632</td><td>1.517</td><td>550</td><td>151</td><td>8.102L</td><td>R$115.965</td></tr>
+        <tr><td>Maio</td><td>689.107</td><td>1.877</td><td>545</td><td>115</td><td>6.765L</td><td>R$108.252</td></tr>
+        <tr><td>Junho</td><td>700.911</td><td>1.792</td><td>558</td><td>154</td><td>9.040L</td><td>R$148.201</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Padrão visível:</b> pedidos oscilam entre 115 e 164 por mês, sem tendência clara de crescimento no semestre — a base parece estável, não crescente. Isso reforça a leitura do negócio: o crescimento esperado não vai vir de "mais gente comprando pela primeira vez", e sim de fazer a mesma base comprar mais vezes — exatamente o que o Cashback ataca.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">03</span><h2>Valor médio por pedido (jan–jun/2026)</h2></div>
+    <div class="grid grid-3">
+      <div class="stat-card black">
+        <div class="stat-num">R$ 871</div>
+        <div class="stat-label">Ticket médio por pedido</div>
+        <div class="stat-desc">Calculado a partir do total do semestre: R$760.263 ÷ 873 pedidos.</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">59,7 L</div>
+        <div class="stat-label">Volume médio por pedido</div>
+        <div class="stat-desc">Calculado a partir do total: 52.157 L ÷ 873 pedidos.</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">R$ 14,58</div>
+        <div class="stat-label">Receita por litro vendido</div>
+        <div class="stat-desc">Calculado a partir do total: R$760.263 ÷ 52.157 L.</div>
+      </div>
+    </div>
+    <p class="src-note">O dashboard comercial não fornece esses três indicadores agregados para o semestre inteiro — só por mês individual. Por isso, calculamos os três diretamente a partir dos totais reais de jan–jun já usados neste relatório (receita, litros e pedidos), em vez de usar a referência pontual de um único mês.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">04</span><h2>Conversão do funil</h2></div>
+    <div class="formula">3,96 milhões de leads <span class="eq">→</span> 7.978 atendimentos <span class="eq">→</span> 3.241 orçamentos <span class="eq">→</span> 873 pedidos (26,9%) <span class="eq">→</span> R$ 760.263</div>
+    <p class="src-note">Conversão orçamento → pedido média do semestre: 873 / 3.241 ≈ 26,9%.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">05</span><h2>Distribuição real de frequência de compra (RD Station, fev–jun/2026)</h2></div>
+    <div class="section-sub">Planilha de negócios exportada do RD Station, funil "*Vendas Varejo B2C" · vendas fechadas ("Vendida") entre 01/02/2026 (implantação do CRM) e 30/06/2026 · clientes identificados por telefone/WhatsApp (chave principal), com ID de contato e nome como critério auxiliar quando o telefone não estava preenchido.</div>
+    <div class="callout red"><b>Ressalva importante, conforme apontado por você:</b> esse dado depende de cadastro manual pelos atendentes e tem erros conhecidos — telefones digitados em formatos diferentes, campos de contato compartilhados entre CNPJs/parceiros, e nomes duplicados. Tratamos isso como uma <b>estimativa direcional</b>, não um número exato. Em pelo menos 1 caso identificamos dois números de telefone concatenados no mesmo campo (provável parceiro revendedor "ROX PARTNER"), o que pode ter inflado artificialmente essa contagem de recompra em ~2-3 pedidos.</div>
+
+    <div class="grid grid-4" style="margin:16px 0;">
+      <div class="stat-card">
+        <div class="stat-num">699</div>
+        <div class="stat-label">Vendas fechadas no período (5 meses)</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">636</div>
+        <div class="stat-label">Clientes únicos estimados</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">1,10</div>
+        <div class="stat-label">Pedidos por cliente, em média, nos 5 meses</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">6,6%</div>
+        <div class="stat-label">Dos clientes compraram mais de uma vez</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Distribuição de clientes por número de compras no período</p>
+      <table>
+        <tr><th>Nº de compras (fev–jun)</th><th>Clientes</th><th>% da base</th></tr>
+        <tr><td>1 compra</td><td>594</td><td>93,4%</td></tr>
+        <tr><td>2 compras</td><td>32</td><td>5,0%</td></tr>
+        <tr><td>3 compras</td><td>4</td><td>0,6%</td></tr>
+        <tr><td>4 compras</td><td>3</td><td>0,5%</td></tr>
+        <tr><td>5 compras</td><td>1</td><td>0,2%</td></tr>
+        <tr><td>6 compras</td><td>2</td><td>0,3%</td></tr>
+        <tr><td><b>Total</b></td><td><b>636</b></td><td><b>100%</b></td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Isso confirma, com dado real, o baseline do negócio:</b> em 5 meses — desde a implantação do CRM — 93,4% dos clientes compraram apenas uma vez. Só 42 clientes (6,6%) voltaram a comprar no período. É a evidência mais direta que temos até agora de que a recorrência hoje é baixa, e mostra o tamanho do salto necessário para chegar à meta de 3x ao ano.</div>
+    </div>
+    <p class="src-note">Não é possível anualizar esse número com precisão (a base de dados só existe desde fevereiro/2026), mas a proporção de compradores únicos (93,4% em 5 meses) é consistente com a meta declarada de ~1x ao ano.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">06</span><h2>Ticket médio: cliente único x recorrente</h2></div>
+    <div class="section-sub">Cruzamento da mesma base RD Station (fev–jun/2026) usando o campo "Valor Único" por pedido.</div>
+    <div class="card">
+      <table>
+        <tr><th></th><th>Ticket médio/pedido</th><th>Valor total gasto no período</th><th>Nº médio de compras</th></tr>
+        <tr><td>Cliente único (1x)</td><td>R$ 919,99</td><td>R$ 919,99</td><td>1,00</td></tr>
+        <tr><td>Cliente recorrente (2x+)</td><td>R$ 730,31</td><td>R$ 1.686,54</td><td>2,49</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Achado central:</b> cliente recorrente gasta <b>1,83x mais no total</b>, mesmo com ticket menor por pedido (R$730 vs. R$920). O valor não vem de gastar mais por vez — vem da frequência. É a base numérica do business case do Cashback.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">07</span><h2>Projeção de faturamento com aumento de recorrência</h2></div>
+    <div class="section-sub">Base: 873 pedidos e R$760.263 de faturamento real (jan–jun/2026, dashboard Lig Chopp Germânia). Metodologia baseada em número de pedidos, não em multiplicador de valor.</div>
+    <div class="card">
+      <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Como a conta foi feita</p>
       <ol class="num-list">
-        <li><b>App mobile.</b> Evolução direta da área do cliente web, com cashback e créditos SCNB.</li>
-        <li><b>Notificações push</b> de promoções.</li>
-        <li><b>Promoções geolocalizadas por loja</b> — cada loja, responsável por sua região, dispara promoções para os clientes mais próximos.</li>
-        <li><b>Marketplace</b> — evolução do e-commerce (ainda a implementar) para uma plataforma mais robusta.</li>
+        <li>A recorrência (636 clientes, 699 pedidos) vem do RD Station, que cobre fev–jun (5 meses). O faturamento (R$760.263, 873 pedidos) vem do dashboard comercial, que cobre jan–jun (6 meses). Escalamos a base de clientes proporcionalmente: fator 873/699 = 1,249 → <b>742 clientes único</b> e <b>52 recorrentes</b> na base de 6 meses.</li>
+        <li>Para cada cenário, uma fatia dos 742 clientes único "migra" para o padrão recorrente (de 1 para 3 pedidos/ano cada) — gerando <b>2 pedidos extras por cliente migrado</b>.</li>
+        <li>Cada pedido extra vale o ticket médio real do cliente recorrente (R$730,31), não o ticket do cliente único — porque é isso que os dados mostram que acontece na prática.</li>
       </ol>
-      <div class="callout" style="margin-top:14px;"><b>Nota de arquitetura:</b> essa visão não faz parte do plano de 90 dias, mas deve orientar as decisões de dados (clientes, pedidos, lojas/região) do protótipo atual, evitando retrabalho futuro.</div>
+      <table style="margin-top:16px;">
+        <tr><th>Cenário</th><th>% dos únicos migrando</th><th>Clientes migrando</th><th>Pedidos extras</th><th>Faturamento projetado</th><th>Incremento</th></tr>
+        <tr><td>Conservador</td><td>10%</td><td>~74</td><td>~148</td><td>~R$ 868.621</td><td style="color:var(--green); font-weight:700;">~+R$ 108.358 (+14,3%)</td></tr>
+        <tr><td>Moderado</td><td>20%</td><td>~148</td><td>~297</td><td>~R$ 976.979</td><td style="color:var(--green); font-weight:700;">~+R$ 216.716 (+28,5%)</td></tr>
+        <tr><td>Otimista</td><td>30%</td><td>~223</td><td>~445</td><td>~R$ 1.085.337</td><td style="color:var(--green); font-weight:700;">~+R$ 325.074 (+42,8%)</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Por que esses percentuais:</b> hoje, sem nenhum incentivo, 6,6% da base já é recorrente organicamente — esse é o piso. 10–30% é a faixa típica de adesão ativa de programas de cashback/fidelidade bem executados no varejo. Mesmo o cenário conservador já representa mais de R$100 mil de incremento em 6 meses, sem depender de nenhum cliente novo.</div>
     </div>
+    <p class="src-note">Ressalva: o ticket médio de R$730,31 e a taxa de 2,49 pedidos/cliente vêm de uma amostra pequena (41 clientes recorrentes reais). Tratar como estimativa direcional, não previsão financeira fechada. Os valores marcados com "~" são estimativas proporcionais (resultado de escalar a base por um fator de 873/699) e foram arredondados para leitura — por isso multiplicar manualmente as colunas pode dar um resultado ligeiramente diferente do exibido.</p>
+  </section>
+</div>
+
+<!-- ===================== SCNB / CRÉDITOS ===================== -->
+<div class="tab" data-tab="scnb">
+  <section>
+    <div class="section-title"><span class="num">01</span><h2>Funil comercial — venda de chopeiras (jan–jun/2026)</h2></div>
+    <div class="section-sub">Dashboard "SCNB / Chopeiras" · consolidado de 01/01 a 30/06/2026 · mede a venda da chopeira (gatilho do crédito), não o crédito em si.</div>
+    <div class="grid grid-4">
+      <div class="stat-card">
+        <div class="stat-num">1.347</div>
+        <div class="stat-label">Leads totais no semestre</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">58</div>
+        <div class="stat-label">Vendas fechadas (26 Germânia + 32 loja)</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">R$ 473k</div>
+        <div class="stat-label">Faturado no semestre</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">9 dias</div>
+        <div class="stat-label">Ciclo médio de venda (mín. 0d, máx. 80d)</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">02</span><h2>Conversão por canal de entrada (jan–jun)</h2></div>
+    <div class="card">
+      <table>
+        <tr><th>Canal</th><th>Leads</th><th>Vendas</th><th>Conversão</th></tr>
+        <tr><td>Ads → WhatsApp → Venda</td><td>392</td><td>5</td><td>1%</td></tr>
+        <tr><td>Ads → Formulário LP → Venda</td><td>837</td><td>12</td><td>1%</td></tr>
+        <tr><td>Orgânico</td><td>79</td><td>9</td><td>11%</td></tr>
+        <tr><td><b>Loja → Venda</b></td><td>39</td><td>32</td><td style="color:var(--green); font-weight:700;">82%</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><b>Dado mais relevante desta seção:</b> quem já é cliente físico de loja converte a 82% no semestre, contra 1–11% dos canais de anúncio digital. Isso reforça priorizar a área do cliente para quem já comprou, em vez de focar em captar lead novo.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">03</span><h2>Produto e mix de vendas (jan–jun)</h2></div>
+    <div class="grid grid-2">
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Mix de produto</p>
+        <ul class="kv-list">
+          <li>Kit Master: <b>34 vendas</b> (59% do mix)</li>
+          <li>Kit Mini: <b>23 vendas</b> (40% do mix)</li>
+          <li>Win rate: <b>13%</b> · Faturado: <b>R$209k</b></li>
+          <li>Voltagem: 47% 110V / 53% 220V</li>
+          <li>Forma de pagamento: <b>98% em crédito</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Cobertura geográfica</p>
+        <ul class="kv-list">
+          <li>39 cidades · 58 vendas · 5 sem localização</li>
+          <li>#1 Cotia — 5 vendas</li>
+          <li>#2 Campinas — 5 vendas</li>
+          <li>#3 São Bernardo do Campo — 4 vendas</li>
+          <li>#4 Atibaia — 4 vendas</li>
+          <li>#5 Mogi Mirim — 2 vendas</li>
+        </ul>
+      </div>
+    </div>
+    <p class="src-note">Com dados de 6 meses, a base de chopeiras vendidas (58) já é grande o suficiente para começar a estimar quantos clientes deveriam ter crédito SCNB ativo hoje.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">—</span><h2>Base de contas do programa (Contas_Compiladas.xlsx, higienizada)</h2></div>
+    <div class="section-sub">A partir daqui, a fonte muda: em vez do dashboard comercial (que mede a venda da chopeira), passamos a usar a planilha "Contas_Compiladas.xlsx" — versão higienizada e deduplicada da base do CRM (4.077 contas, era 4.474 na versão bruta), com um campo novo de <b>elegibilidade</b> (dentro ou fora do prazo de 24 meses) que não existia antes. É aqui que está o crédito em si, não só a venda que o originou.</div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">04</span><h2>Crédito real — o número mais importante</h2></div>
+    <div class="grid grid-4" style="margin-bottom:16px;">
+      <div class="stat-card orange">
+        <div class="stat-num">R$ 1,42 M</div>
+        <div class="stat-label">Crédito elegível (dentro do prazo, resgatável hoje)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">411</div>
+        <div class="stat-label">Contas elegíveis com saldo &gt; 0</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">R$ 146.481</div>
+        <div class="stat-label">Crédito já expirado (34 clientes, prazo vencido)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">535</div>
+        <div class="stat-label">Contas elegíveis no total (13,1% da base)</div>
+      </div>
+    </div>
+    <div class="callout red"><b>Refinamento importante:</b> antes tínhamos um único número (R$1,57 milhão) somando todo saldo positivo, sem considerar prazo. A versão higienizada calcula a <b>elegibilidade real</b> (dentro dos 24 meses do contrato) e separa o crédito em duas categorias: <b>R$1,42 milhão ainda resgatável</b> e <b>R$146.481 já expirado</b> — 34 clientes que tecnicamente perderam o direito ao crédito, mas o saldo continua "visível" no sistema como se ainda valesse.</div>
+    <div class="callout"><b>Novo problema de dado encontrado:</b> 122 contas estão marcadas como elegíveis (SIM), mas têm data de vencimento já passada em relação a hoje (26/08/2026) — somando R$116.438,92 em saldo. É provável que o campo de elegibilidade não seja recalculado automaticamente no sistema, ficando desatualizado. Recomenda-se validar essas 122 contas antes de considerar o cronograma de vencimento 100% confiável.</div>
+    <p class="src-note"><b>Ainda não temos:</b> o histórico de uso — hoje só temos a foto do saldo atual, não quanto já foi resgatado (usado em chopp) versus quanto ficou parado/esquecido ao longo do tempo.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">05</span><h2>ROAS do programa e cronograma de vencimento</h2></div>
+    <div class="grid grid-3" style="margin-bottom:16px;">
+      <div class="stat-card green">
+        <div class="stat-num">3,99x</div>
+        <div class="stat-label">ROAS do saldo elegível (venda futura ÷ custo de fábrica)</div>
+        <div class="stat-desc">R$1.418.991 previstos em venda ÷ R$355.305 de custo de fábrica. Margem bruta de 74,96% sobre o valor de venda.</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-num">173.482 L</div>
+        <div class="stat-label">Litros a vencer nos próximos 24 meses</div>
+        <div class="stat-desc">413 contas elegíveis, R$1,30M em valor de venda futuro.</div>
+      </div>
+      <div class="stat-card black">
+        <div class="stat-num">2027-T4</div>
+        <div class="stat-label">Trimestre de pico de vencimento</div>
+        <div class="stat-desc">~R$280 mil e ~37 mil litros vencendo nesse trimestre — vale planejar capacidade.</div>
+      </div>
+    </div>
+    <p class="src-note">"ncnb_ncnb" (quem ainda está dentro do programa ativo) responde por 98,6% dos litros a vencer — é praticamente o único nível com consumo de chopp programado. O ROAS de 3,99x é um argumento financeiro direto: cada R$1 gasto em produzir o chopp do saldo elegível já tem R$3,99 de venda garantida esperando pra acontecer.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">06</span><h2>Nem toda a base tem saldo — a diferença entre "tier" e "crédito ativo"</h2></div>
+    <div class="card">
+      <div class="grid grid-3" style="margin-bottom:16px;">
+        <div>
+          <div class="stat-num" style="font-size:20px;">4.077</div>
+          <div class="stat-label">Contas totais na base (higienizada)</div>
+        </div>
+        <div>
+          <div class="stat-num" style="font-size:20px;">535</div>
+          <div class="stat-label">Elegíveis — dentro do prazo de 24 meses (13,1%)</div>
+        </div>
+        <div>
+          <div class="stat-num" style="font-size:20px; color:var(--orange);">411</div>
+          <div class="stat-label">Elegíveis COM saldo &gt; 0 hoje</div>
+        </div>
+      </div>
+      <p style="font-size:13.5px; line-height:1.6;"><b>86,9% da base (3.542 contas) está fora do prazo de resgate</b> — não é mais elegível pelo contrato. Dentro do grupo elegível, 124 contas ainda não têm saldo positivo (esgotaram ou nunca chegaram a acumular). Não confundir "cadastrado no programa" com "cliente com crédito disponível": só 411 contas têm, hoje, saldo E prazo válido simultaneamente.</p>
+      <table style="margin-top:16px;">
+        <tr><th>Classificação</th><th>Total</th><th>Elegíveis</th><th>% elegível</th></tr>
+        <tr><td>ncnb_ncnb</td><td>478</td><td>414</td><td style="color:var(--green); font-weight:700;">86,6%</td></tr>
+        <tr><td>ncnb_apreciador</td><td>19</td><td>7</td><td>36,8%</td></tr>
+        <tr><td>ncnb_sommelier</td><td>3.297</td><td>112</td><td style="color:var(--red); font-weight:700;">3,4%</td></tr>
+        <tr><td>ncnb_mestre</td><td>230</td><td>1</td><td style="color:var(--red); font-weight:700;">0,4%</td></tr>
+        <tr><td>ncnb_normal</td><td>3</td><td>0</td><td>0,0%</td></tr>
+        <tr><td>Sem classificação</td><td>50</td><td>1</td><td>2,0%</td></tr>
+      </table>
+      <p class="src-note">"ncnb_ncnb" concentra 77,4% de todos os clientes elegíveis da base — é o nível que efetivamente movimenta o programa hoje. Sommelier e Mestre, mesmo sendo a maioria da base (86% das contas), têm elegibilidade residual (3,4% e 0,4%) — a maior parte já esgotou o crédito ou passou do prazo, consistente com o legado descontinuado descrito abaixo.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">07</span><h2>O legado Sommelier/Mestre — programa antigo que não existe mais</h2></div>
+    <div class="card">
+      <p style="font-size:13.5px; line-height:1.65; margin:0 0 14px;">Até 2025, quando o crédito de um cliente se esgotava (uso ou prazo de 2 anos vencido), ele "graduava" automaticamente para um tier com desconto vitalício: <b>Sommelier (10% de desconto)</b> ou, para clientes selecionados, <b>Mestre (15%)</b>. <b>A partir de 2026, esse desconto não existe mais na prática</b> — mas o CRM continua classificando clientes nesses tiers automaticamente, sem efeito real algum.</p>
+      <p style="font-size:13.5px; line-height:1.6;">Na base higienizada, <b>3.297 contas</b> carregam o tier Sommelier e <b>230</b> o tier Mestre — juntos, 86,5% de toda a base do programa. Desconto histórico sem efeito real hoje.</p>
+      <div class="callout red" style="margin-top:16px;"><b>Ponto de decisão de design:</b> se a área do cliente algum dia mostrar esse "tier" pro cliente, é preciso decidir conscientemente — ele deve refletir a realidade (nenhum desconto ativo) ou deve ser descontinuado/ocultado, pra não recriar a expectativa de um benefício que não existe mais.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">08</span><h2>Geografia e origem dos cadastros</h2></div>
+    <div class="grid grid-2">
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Lojas com mais clientes (Contas_Compiladas.xlsx)</p>
+        <ul class="kv-list">
+          <li>Franca — 189</li>
+          <li>Campinas — 140</li>
+          <li>São Bernardo do Campo — 138</li>
+          <li>São Caetano — 132</li>
+          <li>São Miguel Paulista — 116</li>
+          <li><b>669 contas sem loja associada</b> (era 826 antes da higienização)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p style="font-family:'Poppins',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--gray); margin:0 0 12px;">Contato e origem (painel Gerencial, base pré-higienização)</p>
+        <ul class="kv-list">
+          <li>Com e-mail: 2.183 (48,8%) · Com telefone: 4.224 (94,4%) · Sem nenhum contato: 91 (2,0%)</li>
+          <li>Origem: Não informado 55,1% · Site 27,1% · Indicação 13,1% · Franquia 2,1% · PDV 0,8%</li>
+          <li>Estado: SP 74,5% · MG 6,8% · RJ 1,8% · PR 1,5%</li>
+        </ul>
+      </div>
+    </div>
+    <p class="src-note">Mais da metade da base não tem origem de cadastro registrada — mais um sintoma do problema de padronização entre lojas.</p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="num">09</span><h2>Qualidade dos dados — evidências concretas do problema manual</h2></div>
+    <div class="card"><ul class="num-list">
+      <li><b>10 contas com saldo negativo</b> na base higienizada (16 na base bruta — 6 corrigidos na limpeza), impossível na regra do programa — erro de registro.</li>
+      <li><b>122 contas marcadas elegíveis, mas com vencimento já passado</b> (R$116.438,92 em saldo) — o campo de elegibilidade provavelmente não é recalculado automaticamente no sistema.</li>
+      <li><b>34 clientes com saldo positivo já expirado</b> (R$146.480,66) — o programa não vai mais converter esse valor em venda, mas ele continua "visível" como se fosse crédito válido.</li>
+      <li><b>Data de compra de chopeira registrada em 1959</b> (base bruta) — claramente um erro de digitação, décadas antes de a empresa existir.</li>
+      <li><b>Painel Gerencial interno mostra somas de saldo distorcidas em milhões de reais</b> — ao investigar, 30% dos registros individuais amostrados tinham o mesmo valor exato de R$200.000, um valor impossível pra um crédito de chopeira (que nunca passa de ~R$9.000). É quase certo um erro/placeholder no sistema.</li>
+    </ul></div>
+    <div class="callout red"><b>Por que isso importa:</b> mesmo depois da higienização, e mesmo no painel gerencial interno da empresa, seguem aparecendo erros novos e diferentes — reforça que hoje ninguém, nem a própria Germânia, tem visibilidade totalmente confiável do crédito. Os números de saldo usados neste relatório vêm da planilha higienizada (Contas_Compiladas.xlsx) por ser a versão mais consistente disponível.</div>
+  </section>
+</div>
+
+<!-- ===================== INSIGHTS ===================== -->
+<div class="tab" data-tab="insights">
+  <section>
+    <div class="section-title"><span class="num">—</span><h2>Leitura geral dos números (jan–jun/2026)</h2></div>
+    <div class="card"><ol class="num-list">
+      <li><b>Cliente recorrente vale 1,83x mais no total, mesmo gastando menos por pedido.</b> Ticket médio do recorrente é R$730 (vs. R$920 do único), mas ele compra 2,49 vezes em média — o valor está na frequência, não no ticket. Isso já permite estimar cenários de faturamento: mesmo movendo só 10% da base para o padrão de recorrência, o incremento passa de R$100 mil em 6 meses.</li>
+      <li><b>O crédito SCNB elegível tem tamanho real, mensurável, e um ROAS de 3,99x.</b> R$1,42 milhão em crédito ainda dentro do prazo (411 contas), vindo da planilha higienizada do CRM. Cada R$1 de custo de fábrica desse saldo já tem R$3,99 de venda futura esperando — é um argumento financeiro direto, não só uma estimativa de "problema".</li>
+      <li><b>Mas R$146 mil desse crédito já expiraram — dinheiro que não vai mais virar venda.</b> 34 clientes tinham saldo positivo, mas passaram do prazo de 24 meses. Isso é receita perdida de forma silenciosa, sem que o cliente (ou a Germânia) percebesse o vencimento acontecer.</li>
+      <li><b>O programa SCNB tem um "passivo de promessa" histórico não documentado no site.</b> Até 2025, cliente que esgotava o crédito virava Sommelier (10% desconto vitalício) ou Mestre (15%) — hoje esse benefício não existe mais na prática, mas o CRM ainda classifica 3.527 contas (86,5% da base) nesses tiers automaticamente. É uma decisão de design pendente: mostrar isso na área do cliente ou descontinuar.</li>
+      <li><b>Mesmo depois de higienizada, a base ainda revela erros novos de sistema.</b> 122 contas marcadas como elegíveis têm data de vencimento já vencida (R$116 mil), e o painel gerencial interno mostra somas distorcidas em milhões. Isso não é um problema só de comunicação com o cliente — é um problema de confiabilidade de dado internamente, que a higienização reduziu mas não eliminou.</li>
+      <li><b>A recorrência real, medida no CRM, é ainda mais baixa do que o esperado.</b> Em 5 meses de dados (fev–jun/2026), 93,4% dos clientes que compraram no varejo B2C compraram apenas uma vez — só 6,6% voltaram a comprar. Esse número é uma estimativa (dado depende de cadastro manual), mas confirma com dado real o baseline de baixa recorrência que motiva o Cashback.</li>
+      <li><b>A recorrência digital medida é baixa e é o dado mais direto que temos.</b> Só 5,2 mil dos 46 mil usuários do semestre (~11%) voltaram ao site. Isso é evidência concreta — não só uma hipótese de negócio — de que o padrão de baixo retorno também aparece no digital, reforçando a urgência do Cashback.</li>
+      <li><b>O funil comercial está estável, não em crescimento.</b> Pedidos oscilaram entre 115 e 164 por mês ao longo do semestre, sem tendência clara de alta. Ou seja, a empresa não está organicamente conquistando muito mais clientes novos — o crescimento futuro depende de fazer a base atual comprar com mais frequência, exatamente o que o Cashback ataca.</li>
+      <li><b>Quem já comprou converte muito melhor do que quem é só lead frio.</b> No funil de chopeiras do semestre, o canal "Loja → Venda" converte a 82%, contra 1–11% dos canais de anúncio. O mesmo padrão provavelmente vale para cashback: cliente que já compra chopp regularmente é o público mais fácil de mover de 1x para 3x ao ano.</li>
+      <li><b>O ticket médio por chopeira vendida está subindo forte desde 2024.</b> Saldo gerado por cadastro: ~R$1.116 em 2023 → ~R$2.373 em 2024 → ~R$2.409 em 2025 → ~R$3.922 em 2026 (parcial). Não é só volume de vendas voltando (56 → 69 → 207 → 173 cadastros) — o valor por chopeira vendida também está crescendo, sinal de mudança na régua comercial do programa.</li>
+    </ol></div>
   </section>
 </div>
 
 </main>
 
-<div class="footer-note" style="max-width:1080px;margin:0 auto;padding:0 32px;">Plano de 90 Dias · Área do Cliente &amp; Redesign do Site · Cervejaria Germânia / Lig Chopp Germânia</div>
+<div class="footer-note">Levantamento de Dados · Cashback &amp; Créditos Sua Casa Nosso Bar · Cervejaria Germânia — Fonte: Google Analytics 4, Dashboard "Lig Chopp Germânia" e Dashboard "SCNB / Chopeiras" · Período consolidado: janeiro a junho de 2026</div>
 
 <script>
-/* ---------- DATA ---------- */
-const AREAS = ["Clientes","Comercial","Marketing","Financeiro","Operações","Pessoas","Liderança","Gestão"];
-const RADAR = [6,7,8,8,9,6,5,8];
-const RADAR_MAX = 10;
-
-const DIAG = [
-  ["Clientes","Base compra em média 1x/ano; sem acesso direto ao saldo de créditos do Sua Casa Nosso Bar.","Cliente precisa perguntar à loja para saber o saldo, o que gera espera e possível confusão.","Baixa recorrência de compra e experiência de marca prejudicada.","Maior gargalo"],
-  ["Tecnologia / Site","Site atual em Mobirise, visual datado, sem rastreamento de tráfego (sem Analytics/Clarity).","Impossível medir comportamento do usuário ou validar decisões de design com dados.","Imagem de marca ultrapassada e decisões tomadas sem visibilidade real do site.",""],
-  ["Fidelização","Programa de cashback ainda não existe; créditos SCNB sem padrão de registro entre lojas.","Falta de padronização gera inconsistência nas informações de saldo.","Recorrência estagnada em 1x/ano — meta é chegar a 3x/ano.",""],
-  ["Operação de Pedidos","Pedidos via WhatsApp/telefone, repassados manualmente da central à loja mais próxima.","Processo dependente de intermediação humana; canal digital direto ainda em implementação.","Risco de erro e lentidão no atendimento ao cliente final.",""],
-  ["Cultura / Liderança","Cultura organizacional antiga; menor nota do radar de maturidade está em Liderança (5).","Resistência da diretoria a mudanças no formato de atendimento e nos processos.","Risco de lentidão na adoção do novo sistema, mesmo estando pronto.",""]
-];
-
-const SMART = [
-  {t:"Protótipo do site + área do cliente", r:"Felipe", s:"Desenvolver o protótipo do novo site institucional com área do cliente funcional (cashback, créditos Sua Casa Nosso Bar e histórico de pedidos). A implementação em produção é uma fase futura.", m:"Protótipo entregue e validado + área do cliente funcional em ambiente de teste + nº de clientes participantes do teste/validação (a definir).", a:"Viável com equipe interna de design e desenvolvimento e ferramentas já em uso (Figma, Claude Code, Lovable).", rl:"Base para aumentar a frequência de compra de 1x para 3x ao ano e modernizar a imagem da marca.", tm:"90 dias úteis, de 03/08/2026 a 06/11/2026."},
-  {t:"Capacitação dos lojistas para uso da área do cliente", r:"Felipe", s:"Capacitar os lojistas e suas equipes para utilizar a área do cliente após a implementação em produção — consulta de créditos SCNB, histórico de pedidos e, futuramente, cashback.", m:"100% das lojas com pelo menos uma pessoa capacitada, usando checklist de treinamento e material de apoio (guia rápido/vídeo).", a:"Viável com material de apoio simples e treinamento remoto ou presencial nas lojas, já com a estrutura pronta ao final dos 90 dias.", rl:"Sem essa capacitação, o registro de créditos continuaria manual e sem padrão, anulando parte do ganho do projeto — é o elo entre o protótipo pronto e o uso real na ponta.", tm:"A definir — depende da fase de implementação em produção, posterior aos 90 dias (possível primeiro passo do próximo ciclo)."}
-];
-
-const TIMELINE = [
-  ["03/08 a 04/09/2026","Design do novo site","Redesign completo em Figma (institucional + área do cliente), substituindo o visual datado do Mobirise.","Responsável: Felipe"],
-  ["07/09 a 09/10/2026","Estrutura técnica do protótipo","Desenvolvimento via Claude Code: banco de dados, cadastro, login e área do cliente navegável.","Responsável: Felipe"],
-  ["12/10 a 16/10/2026","Simulação de dados","Exibição de dados de pedidos e créditos com base em exemplos fiéis à estrutura real do RD Station, sem integração técnica real nesta fase.","Responsável: Felipe"],
-  ["19/10 a 30/10/2026","Testes gerais","Testes funcionais, de usabilidade e responsividade, garantindo protótipo sem bugs críticos.","Responsável: Felipe"],
-  ["02/11 a 06/11/2026","Ajustes finais e entrega","Protótipo completo, testado e documentado — pronto para uma futura fase de implementação em produção (deploy com TI).","Responsável: Felipe + TI (deploy futuro)"]
-];
-
-/* ---------- RADAR ---------- */
-function drawRadar(){
-  const svg = document.getElementById("radar");
-  const cx=250, cy=210, R=150, max=RADAR_MAX, n=AREAS.length;
-  const rings=5; let s="";
-  const pt=(i,r)=>{const ang=-Math.PI/2 + i*2*Math.PI/n; return [cx+r*Math.cos(ang), cy+r*Math.sin(ang)];};
-  for(let k=1;k<=rings;k++){
-    const r=R*k/rings; let p="";
-    for(let i=0;i<n;i++){const[x,y]=pt(i,r); p+=`${x.toFixed(1)},${y.toFixed(1)} `;}
-    s+=`<polygon points="${p.trim()}" fill="none" stroke="#E4E4E4" stroke-width="1"/>`;
-    const val=(max*k/rings).toFixed(0);
-    s+=`<text x="${cx+4}" y="${(cy-r+4).toFixed(1)}" font-size="10" fill="#9a9a9a" font-family="Poppins">${val}</text>`;
-  }
-  for(let i=0;i<n;i++){
-    const[x,y]=pt(i,R); s+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#E4E4E4" stroke-width="1"/>`;
-    const[lx,ly]=pt(i,R+26);
-    const anchor = Math.abs(lx-cx)<6 ? "middle" : (lx>cx?"start":"end");
-    s+=`<text x="${lx.toFixed(1)}" y="${(ly+4).toFixed(1)}" text-anchor="${anchor}" class="radar-axis-label">${AREAS[i]}</text>`;
-  }
-  const color = "#E20D21";
-  let p="";
-  for(let i=0;i<n;i++){const[x,y]=pt(i,R*RADAR[i]/max); p+=`${x.toFixed(1)},${y.toFixed(1)} `;}
-  s+=`<polygon points="${p.trim()}" fill="${color}22" stroke="${color}" stroke-width="2.5"/>`;
-  for(let i=0;i<n;i++){const[x,y]=pt(i,R*RADAR[i]/max); s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5" fill="${color}"/>`;}
-  svg.innerHTML=s;
-}
-
-/* ---------- RENDER ---------- */
-function renderDiag(){
-  const g=document.getElementById("diag-grid");
-  g.innerHTML = DIAG.map((a,i)=>`
-    <div class="area-card">
-      <div class="area-head"><span class="idx">${String(i+1).padStart(2,'0')}</span><h3>${a[0]}</h3>${a[4]?`<span class="badge" style="margin-left:auto;background:#FDE8E8;color:var(--red);">${a[4]}</span>`:''}</div>
-      <div class="area-body">
-        <div class="row"><span class="tag">Evidência</span>${a[1]}</div>
-        <div class="row"><span class="tag cons">Consequência</span>${a[2]}</div>
-        <div class="row"><span class="tag imp">Impacto</span>${a[3]}</div>
-      </div>
-    </div>`).join("");
-}
-function renderSmart(){
-  const w=document.getElementById("smart-list");
-  w.innerHTML = SMART.map(k=>`
-    <div class="smart-card">
-      <div class="init-head"><h3>${k.t}</h3><span class="resp">Responsável: ${k.r}</span></div>
-      <div class="smart-grid">
-        <div class="smart-item"><span class="letter">S · Específico</span>${k.s}</div>
-        <div class="smart-item"><span class="letter">M · Mensurável</span>${k.m}</div>
-        <div class="smart-item"><span class="letter">A · Atingível</span>${k.a}</div>
-        <div class="smart-item"><span class="letter">R · Relevante</span>${k.rl}</div>
-        <div class="smart-item"><span class="letter">T · Temporal</span>${k.tm}</div>
-      </div>
-    </div>`).join("");
-}
-function renderTimeline(){
-  const w=document.getElementById("timeline");
-  w.innerHTML = TIMELINE.map(t=>`<div class="tl-item"><div class="tl-date">${t[0]}</div><div class="tl-title">${t[1]}</div><div class="tl-desc">${t[2]}</div><div class="tl-meta">${t[3]}</div></div>`).join("");
-}
-
-drawRadar();
-renderDiag();
-renderSmart();
-renderTimeline();
-
-/* ---------- TABS ---------- */
 document.querySelectorAll('#tabs button').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('#tabs button').forEach(b=>b.classList.remove('active'));
@@ -468,6 +790,5 @@ document.querySelectorAll('#tabs button').forEach(btn=>{
   });
 });
 </script>
-
 
 </body></html>
